@@ -1,0 +1,122 @@
+{
+ "editor.defaultFormatter": "esbenp.prettier-vscode",
+ "editor.detectIndentation": true,
+ "editor.fontFamily": "'Dank Mono', 'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+ "editor.fontLigatures": true,
+ "editor.fontWeight": "300",
+ "editor.suggestSelection": "first",
+ "editor.rulers": [80],
+ "editor.snippetSuggestions": "top",
+ "editor.wordBasedSuggestions": false,
+ "editor.suggest.localityBonus": true,
+ "javascript.updateImportsOnFileMove.enabled": "always",
+ "editor.acceptSuggestionOnCommitCharacter": false,
+ "[javascript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.suggest.showKeywords": false
+ },
+ "css.validate": false,
+ "less.validate": false,
+ "scss.validate": false,
+ "emmet.includeLanguages": {
+  "javascript": "javascriptreact"
+ },
+ "editor.renderWhitespace": "boundary",
+ "files.exclude": {
+  "USE_GITIGNORE": true
+ },
+ "files.defaultLanguage": "{activeEditorLanguage}",
+ "javascript.validate.enable": true,
+ "search.exclude": {
+  "**/node_modules": true,
+  "**/bower_components": true,
+  "**/coverage": true,
+  "**/dist": true,
+  "**/build": true,
+  "**/.build": true,
+  "**/.gh-pages": true
+ },
+ "editor.codeActionsOnSave": {
+  "source.fixAll.eslint": false
+ },
+ "eslint.validate": [
+  "javascript",
+  "javascriptreact",
+  "typescript",
+  "typescriptreact"
+ ],
+ "eslint.options": {
+  "env": {
+   "browser": true,
+   "jest/globals": true,
+   "es6": true
+  },
+  "parserOptions": {
+   "ecmaVersion": 2019,
+   "sourceType": "module",
+   "ecmaFeatures": {
+    "jsx": true
+   }
+  },
+  "rules": {
+   "no-debugger": "off"
+  }
+ },
+ "sync.gist": "7add7ac8efe6d5a73cd11540f6b4894e",
+ "workbench.iconTheme": "material-icon-theme",
+ "breadcrumbs.enabled": true,
+ "grunt.autoDetect": "off",
+ "gulp.autoDetect": "off",
+ "npm.runSilent": true,
+ "explorer.confirmDragAndDrop": false,
+ "editor.formatOnPaste": false,
+ "editor.cursorSmoothCaretAnimation": true,
+ "editor.smoothScrolling": true,
+ "php.suggest.basic": false,
+ "editor.fontSize": 15,
+ "importCost.debug": true,
+ "importCost.timeout": 200000,
+ "importCost.javascriptExtensions": ["\\.jsx?$"],
+ "typescript.updateImportsOnFileMove.enabled": "always",
+ "vetur.experimental.templateInterpolationService": true,
+ "vetur.validation.templateProps": true,
+ "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+ "javascript.inlayHints.enumMemberValues.enabled": true,
+ "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+ "javascript.inlayHints.parameterNames.enabled": "all",
+ "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+ "javascript.inlayHints.variableTypes.enabled": true,
+ "security.workspace.trust.untrustedFiles": "open",
+ "editor.quickSuggestions": {
+  "comments": "on",
+  "strings": "on",
+  "other": "on"
+},
+ "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+ "python.pythonPath": "/usr/bin/python",
+ "workbench.editorAssociations": {
+  "*.ipynb": "jupyter-notebook"
+ },
+ "python.linting.pylintEnabled": false,
+ "python.linting.banditEnabled": true,
+ "python.linting.enabled": true,
+ "svelte.enable-ts-plugin": true,
+ "bracketPairColorizer.depreciation-notice": false,
+ "prettier.tabWidth": 1,
+ "tabnine.experimentalAutoImports": true,
+ "editor.formatOnSave": true,
+ "editor.tabSize": 2,
+ "workbench.tree.indent": 10,
+ "editor.inlineSuggest.enabled": true,
+ "liveServer.settings.ChromeDebuggingAttachment": false,
+ "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 2, TabWidth: 2, BreakBeforeBraces: Attach, AllowShortIfStatementsOnASingleLine: true, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -2 }",
+ "[c]": {
+  "editor.defaultFormatter": "ms-vscode.cpptools"
+ },
+ "files.associations": {
+  "math.h": "c",
+  "stdio.h": "c",
+  "basic.h": "c"
+ }
+}
