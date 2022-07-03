@@ -19,7 +19,11 @@ void destroyStack(Stack *s) {
   free(s);
 }
 
+static Box *available = 0;
+// create a varibale tracker of type BOX
+
 status push(Stack *s, void *elements) {
+  // because the call to malloc is memory intensive, out aim here is the minimize the call to malloc
   Box *tmp = (Box *)malloc(sizeof(Box));
   if (!tmp) return ERRALLOC;
   tmp->next = *s;
@@ -27,6 +31,19 @@ status push(Stack *s, void *elements) {
   *s = tmp;
   return OK;
 }
+
+// status push(Stack *s, void *elements) {
+//   //----New code -----------------
+//   // because the call to malloc is memory intensive, out aim here is the minimize the call to malloc
+//   // Box *tmp = (Box *)malloc(sizeof(Box));
+//   Box *tmp = available;
+//   // check tf the box is true. A box can only be true if
+//   if (tmp) {
+//     available = tmp->next;
+//   } else {
+//     tmp = (Box *)malloc(sizeof(Box));
+//   }
+// }
 
 status pop(Stack *s) {
   Stack tmp = *s;
@@ -46,34 +63,17 @@ status top(Stack *s, void *res) {
   Stack tmp;
   if (!tmp) return ERREMPTY;
   tmp = *s;
-  // the trick here is that void pointers always need to be casted back because
-  // 1) they cannot be derefernced like before to return a value
-  // eg:
-  // FIXME: copied from https://www.geeksforgeeks.org/void-pointer-c-cpp/
-  // int a = 10;
-  // void *ptr = &a;
-  // printf("%d", *ptr);
-  // will not run
+  // this works but how do we assign it to res
+  // TODO: assign a void pinter to an interger in a generic function
+  // printf("%d\n", *(int *)tmp->val);
 
-  //---------------------------------------------------------------
-  // THE CORRECTION BELOW WILL RUN CAUSE ITS BEEN TYPECASTED
-
-  // int a = 10;
-  // void *ptr = &a;
-  // printf("%d", *(int *)ptr);
-
-  // *res = tmp->val;
-  // the code above now becomes recomes which is a pointer to a pointer
-  // remeber the aim here is to give the *res key a new value. We already have the top value
-  // this is (tmp->val) but we want to pass that value outside the function to the result
-  // NOTE: during the push operation, temp->value is a void pointer
-  // the below staement is saying res is a pointer that is pointing to another pointer tmp->val
-  // from there we are getting the address and setting it to out tmp->val
-  // TODO: remeber with malloc we always cast back to a (int*) because we are sure that
-  // thats what is going to be stored there. here we are sure that what will be here is
-  // a pointer to a pointer of type void. so we cast it and then derefernce
-  // it to store its value. the main thing here is casting to indicate type.
-
+  printf("before call\n");
+  printf("%d\n", *(void **)tmp->val);
+  printf("after call\n");
+  // The first thinh to know is that in order to pass a void start by address, it must be
+  // passed as void **. The only problem there is that void ** is not compatible with
+  // all datatypes but they can be dereferenced.
+  // We will cast the final result to a void ** because we want to derefercne
   *(void **)res = tmp->val;
 
   return OK;

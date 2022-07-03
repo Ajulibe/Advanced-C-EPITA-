@@ -25,19 +25,20 @@ int main() {
   }
 
   // for i2
-  if (st = push(s, &i2)) {
-    // printf(errorMessage(st));
-    return st;
-  }
+  // if (st = push(s, &i2)) {
+  //   // printf(errorMessage(st));
+  //   return st;
+  // }
 
   int result = isEmpty(s);
-  printf("%d\n", result);
+  // printf("%d\n", result);
 
   //-------------------------------------------------------
   // refactor to satisfy class requirements
   int *e;
   st = top(s, &e);
-  printf('%d\n', *e);
+  printf("Before segmentation");
+  // printf('%d\n', *e);
   // while (!isEmpty(s)) {
   //   printf("enter here");
   //   int *e;
