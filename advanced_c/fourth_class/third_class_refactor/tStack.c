@@ -1,5 +1,6 @@
 #include "Stackl.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
   int SIZE = 10;
@@ -18,7 +19,7 @@ int main() {
     st = push(s, i);
     // error checking
     if (st)
-      print("%s\n", message(st));
+      printf("%s\n", message(st));
   }
   int result = isEmpty(s);
   printf("%d\n", result);

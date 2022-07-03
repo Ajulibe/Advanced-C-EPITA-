@@ -1,8 +1,8 @@
 # makefile for stack files
 
-OBJ = Stackl.o tStackl.o
+OBJ = status.o Stackl.o tStack.o
 
-tStackl: $(OBJ)
-	gcc -o tStackl $(OBJ)
+tStack: $(OBJ)
+	gcc -o tStack $(OBJ)
 
 $(OBJ): Stackl.h
