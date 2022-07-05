@@ -9,7 +9,7 @@
  *
  * Each value of the "status" enum is associated with an error message.
  * Every function (but some of those returning pointers) should return a
- * status. In the case of non-void functions, the former return value has 
+ * status. In the case of non-void functions, the former return value has
  * to be placed in the parameter list (by address)
  *
  ********************************************************************/

@@ -1,6 +1,6 @@
 # makefile for stack files
 
-OBJ = Stacko.o tStack.o
+OBJ = status.o Stacko.o tStacko.o
 
 tStacko: $(OBJ)
 	gcc -o tStacko $(OBJ)

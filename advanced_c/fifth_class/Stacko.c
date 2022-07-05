@@ -1,4 +1,5 @@
 #include "Stacko.h"
+#include <String.h>
 #include <stdlib.h>
 
 Stack *createStack(int eltSize) {
@@ -11,20 +12,6 @@ Stack *createStack(int eltSize) {
 }
 
 status push(Stack *s, void *element) {
-  // Box *newBox = (Box *)malloc(sizeof(Box) + s->eltSize - 1);
-  // newBox->val[1] = element;
-
-  // if (s->head == 0) {
-  //   newBox->next = 0;
-  //   s->head = newBox;
-  // } else {
-  //   Box *oldBox = (Box *)malloc(sizeof(Box));
-  //   if (!oldBox) return ERRALLOC;
-  //   oldBox = s->head;
-  //   newBox->next = oldBox;
-  //   s->head = newBox;
-  // }
-
   //* MORE ELEGANT FROM THE PROF
   // look at the bof definition. it is made up of a BOX and and ELEMENT of 1 Byte
   // therefore we will create same as shown below
@@ -56,7 +43,18 @@ int isEmpty(Stack *s) {
 
 status pop(Stack *s) {
   Box *temp = s->head;
+  // temp creates a neutral ground where values can be stored
+  // s->head = s->head->next
+  //  the head now points to th next box
+  // in an optimixation case, we do this as hsown innnote
+  // temp->next = available;
+  //* Preserving the available box in the next region
+  // available = temp
+  // temp->next = s->available;
+  // s->available = temp;
+
   s->head = temp->next;
+
   free(temp);
 }
 

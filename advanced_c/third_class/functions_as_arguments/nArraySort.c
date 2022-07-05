@@ -27,7 +27,7 @@ void sortArray(int *a, int size) {
 // array = 2 | 3 | 4 | 5 | 6 | 7 | 8
 // for l -> 2 | 3 | 4 | 5 | 6 | 7
 // for r ->  3 | 4 | 5 | 6 | 7 | 8
-void nSortArray(void *a, int size, int eltSize, int (*cmp)(void *, void *)) {
+void nSortArray(void *a, int size, int eltSize, int (*comp)(void *, void *)) {
   int l, r;
   // size if the no. of element in the array.
   // eltSize is added to function to determine the size of the memory created

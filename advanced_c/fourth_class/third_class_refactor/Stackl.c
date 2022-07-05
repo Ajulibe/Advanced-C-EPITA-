@@ -27,6 +27,7 @@ status push(Stack *s, int elements) {
 void destroyStack(Stack *s) {
   // remove the elements in the stack
   Stack tmp;
+  // Box *temp; // or Stack temp;
   while (*s) {
     // the sole aim here is to gradually shot the pointer to the next element and destroy
     // the temp variable to free it up after each assignment

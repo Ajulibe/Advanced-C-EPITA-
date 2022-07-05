@@ -23,7 +23,8 @@ static Box *available = 0;
 // create a varibale tracker of type BOX
 
 status push(Stack *s, void *elements) {
-  // because the call to malloc is memory intensive, out aim here is the minimize the call to malloc
+  // because the call to malloc is memory intensive,
+  //out aim here is the minimize the call to malloc
   Box *tmp = (Box *)malloc(sizeof(Box));
   if (!tmp) return ERRALLOC;
   tmp->next = *s;
